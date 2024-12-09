@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Web App</title>
+</head>
+<body>
+    <h1>Camera Web App</h1>
+    <a href="/capture"><button>Capture Image</button></a>
+    
+    {% if captured %}
+        <h2>Image captured successfully!</h2>
+        <img src="/image" alt="Captured Image">
+    {% elif captured is not none %}
+        <h2>Error capturing image: {{ error }}</h2>
+    {% endif %}
+</body>
+</html>
+
